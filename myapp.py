@@ -20,7 +20,7 @@ data_path_ = os.path.join(current_file_path, data_path)
 
 @st.cache_data
 def load_model():
-  model = tf.keras.models.load_model(data_path_+'model/')
+  model = tf.keras.models.load_model('./models/')
   return model
 
 with st.spinner('Loading Model Into Memory....'):
