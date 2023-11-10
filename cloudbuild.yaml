@@ -18,4 +18,3 @@ steps:
   - --filename=K8s/
   - --location=us-west1-b
   - --cluster=mykube
-  - --timeout=10m
