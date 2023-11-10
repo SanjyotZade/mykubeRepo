@@ -1,6 +1,7 @@
 # lightweight python
 FROM python:3.7-slim
 
+
 RUN apt-get update
 
 # Copy local code to the container image.
