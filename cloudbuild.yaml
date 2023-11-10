@@ -2,19 +2,19 @@ steps:
 - name: 'gcr.io/cloud-builders/docker1403'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/myapp:v1', '.']
   timeout: 180s
-# - name: 'gcr.io/cloud-builders/docker1403'
-#   args: ['push', 'gcr.io/$PROJECT_ID/myapp:v1']
-# - name: 'gcr.io/cloud-builders/gcloud'
-#   entrypoint: "bash"
-#   args:
-#   - "-c"
-#   - |
-#     echo "Docker Container Built"
-#     ls -la
-#     ls -al models/
-# - name: "gcr.io/cloud-builders/gke-deploy"
-#   args:
-#   - run
-#   - --filename=K8s/
-#   - --location=us-west1-b
-#   - --cluster=mykube
+- name: 'gcr.io/cloud-builders/docker1403'
+  args: ['push', 'gcr.io/$PROJECT_ID/myapp:v1']
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: "bash"
+  args:
+  - "-c"
+  - |
+    echo "Docker Container Built"
+    ls -la
+    ls -al models/
+- name: "gcr.io/cloud-builders/gke-deploy"
+  args:
+  - run
+  - --filename=K8s/
+  - --location=us-west1-b
+  - --cluster=mykube
