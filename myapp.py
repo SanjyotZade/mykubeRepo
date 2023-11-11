@@ -15,12 +15,12 @@ st.title("Location Image Classifier")
 st.text("Provide URL of Location Image for image classification")
 
 current_file_path = os.path.dirname(os.path.abspath(__file__))
-data_path = "data/intel_data/"
-data_path_ = os.path.join(current_file_path, data_path)
+model_path = "models/"
+model_path = os.path.join(current_file_path, model_path)
 
 @st.cache_data
 def load_model():
-  model = tf.keras.models.load_model('./models/')
+  model = tf.keras.models.load_model(model_path)
   return model
 
 with st.spinner('Loading Model Into Memory....'):
