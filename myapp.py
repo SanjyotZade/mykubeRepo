@@ -15,7 +15,7 @@ st.title("Location Image Classifier")
 st.text("Provide URL of Location Image for image classification")
 
 current_file_path = os.path.dirname(os.path.abspath(__file__))
-model_path = "models/saved_model.pb"
+model_path = "models/"
 model_path = os.path.join(current_file_path, model_path)
 
 @st.cache_data
