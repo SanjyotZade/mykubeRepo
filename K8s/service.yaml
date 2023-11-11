@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: imageclassifier
 spec:
-  type: LoadBalancdocker
+  type: LoadBalancer
   selector:
     app: imageclassifier
   ports:
