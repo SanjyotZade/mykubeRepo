@@ -2,4 +2,4 @@
 
 CICD
 
-![mlops-flow] (mlop_flow.png)
+![mlops-flow](mlop_flow.png)
